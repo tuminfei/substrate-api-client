@@ -38,7 +38,7 @@ pub fn chain_subscribe_new_head() -> Value {
 
 pub fn chain_subscribe_new_head_with_id(id: u32) -> Value {
     json!({
-        "method": "chain_subscribeNewHead",
+        "method": "chain_subscribeNewHeads",
         "params": null,
         "jsonrpc": "2.0",
         "id": id.to_string(),
