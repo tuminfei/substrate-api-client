@@ -223,4 +223,10 @@ impl<P> Api<P>
 
         rpc::start_event_subscriber(self.url.clone(), jsonreq.clone(), sender.clone());
     }
+
+    pub fn subscribe_new_heads(&self, sender: ThreadOut<String>) {
+        debug!("subscribing to new block");
+        let jsonreq = json_req::chain_subscribe_new_head().to_string();
+        rpc::start_event_subscriber(self.url.clone(), jsonreq.clone(), sender.clone());
+    }
 }

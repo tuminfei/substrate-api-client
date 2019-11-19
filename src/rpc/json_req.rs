@@ -32,6 +32,19 @@ pub fn chain_get_block_hash_with_id(id: u32) -> Value {
     })
 }
 
+pub fn chain_subscribe_new_head() -> Value {
+    chain_subscribe_new_head_with_id(1)
+}
+
+pub fn chain_subscribe_new_head_with_id(id: u32) -> Value {
+    json!({
+        "method": "chain_subscribeNewHead",
+        "params": null,
+        "jsonrpc": "2.0",
+        "id": id.to_string(),
+    })
+}
+
 pub fn state_get_metadata() -> Value {
     state_get_metadata_with_id(1)
 }

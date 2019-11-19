@@ -165,6 +165,10 @@ path = "src/examples/example_compose_extrinsic_offline.rs"
 name = "example_sudo"
 path = "src/examples/example_sudo.rs"
 
+[[example]]
+name = "example_new_block_callback"
+path = "src/examples/example_new_block_callback.rs"
+
 [patch."https://github.com/paritytech/substrate"]
 substrate-primitives = { package = "substrate-primitives", path = "./primitives", default-features = false }
 
